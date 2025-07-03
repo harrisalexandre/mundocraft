@@ -11,6 +11,7 @@ const Gallery = () => {
   const images = [
     {
       src: "/mundocraft/images/explorando-oceano.png",
+      src: " /mundocraft/images/explorando-oceano.png",
       title: "Explorando o Oceano",
       description: "Jogadores descobrindo as maravilhas aquáticas com golfinho",
       category: "Exploração",
