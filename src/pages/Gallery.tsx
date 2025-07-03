@@ -10,31 +10,31 @@ const Gallery = () => {
 
   const images = [
     {
-      src: "/images/explorando-oceano.png",
+      src: " /mundocraft/images/explorando-oceano.png",
       title: "Explorando o Oceano",
       description: "Jogadores descobrindo as maravilhas aquáticas com golfinho",
       category: "Exploração",
     },
     {
-      src: "/images/acampamento-caverna.jpg",
+      src: " /mundocraft/images/acampamento-caverna.jpg",
       title: "Acampamento na Caverna",
       description: "Base subterrânea aconchegante com decoração rústica",
       category: "Construção",
     },
     {
-      src: "/images/aventura-ar-livre.png",
+      src: " /mundocraft/images/aventura-ar-livre.png",
       title: "Aventura ao Ar Livre",
       description: "Explorando o mundo com equipamentos diamante",
       category: "Aventura",
     },
     {
-      src: "/images/e222e0d9-6331-4c02-b236-cf1a94a970e8.png",
+      src: " /mundocraft/images/e222e0d9-6331-4c02-b236-cf1a94a970e8.png",
       title: "Mineração Cooperativa",
       description: "Jogadores trabalhando juntos na mineração",
       category: "Cooperação",
     },
     {
-      src: "/images/estruturas-epicas.jpg",
+      src: " /mundocraft/images/estruturas-epicas.jpg",
       title: "Estruturas Épicas",
       description: "Construções impressionantes da nossa comunidade",
       category: "Construção",
@@ -186,3 +186,4 @@ const Gallery = () => {
 };
 
 export default Gallery;
+
