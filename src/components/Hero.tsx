@@ -24,7 +24,7 @@ const Hero = () => {
         {/* Imagem do Hero */}
         <div className="w-full max-w-lg lg:max-w-xl">
           <img
-            src="/lovable-uploads/hero.png"
+            src="/images/hero.png"
             alt="Personagens Minecraft"
             className="w-full h-auto rounded-xl drop-shadow-xl"
           />

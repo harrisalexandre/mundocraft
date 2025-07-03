@@ -10,31 +10,31 @@ const Gallery = () => {
 
   const images = [
     {
-      src: "/lovable-uploads/explorando-oceano.png",
+      src: "/images/explorando-oceano.png",
       title: "Explorando o Oceano",
       description: "Jogadores descobrindo as maravilhas aquáticas com golfinho",
       category: "Exploração",
     },
     {
-      src: "/lovable-uploads/acampamento-caverna.jpg",
+      src: "/images/acampamento-caverna.jpg",
       title: "Acampamento na Caverna",
       description: "Base subterrânea aconchegante com decoração rústica",
       category: "Construção",
     },
     {
-      src: "/lovable-uploads/aventura-ar-livre.png",
+      src: "/images/aventura-ar-livre.png",
       title: "Aventura ao Ar Livre",
       description: "Explorando o mundo com equipamentos diamante",
       category: "Aventura",
     },
     {
-      src: "/lovable-uploads/e222e0d9-6331-4c02-b236-cf1a94a970e8.png",
+      src: "/images/e222e0d9-6331-4c02-b236-cf1a94a970e8.png",
       title: "Mineração Cooperativa",
       description: "Jogadores trabalhando juntos na mineração",
       category: "Cooperação",
     },
     {
-      src: "/lovable-uploads/estruturas-epicas.jpg",
+      src: "/images/estruturas-epicas.jpg",
       title: "Estruturas Épicas",
       description: "Construções impressionantes da nossa comunidade",
       category: "Construção",
