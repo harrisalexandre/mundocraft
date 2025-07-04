@@ -4,38 +4,38 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ZoomIn, ExternalLink } from "lucide-react";
 import { useState } from "react";
+import { IMAGE_PATH } from "@/config";
 
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   const images = [
     {
-      src: "/mundocraft/images/explorando-oceano.png",
-      src: " /mundocraft/images/explorando-oceano.png",
+      src: `${IMAGE_PATH}explorando-oceano.png`,
       title: "Explorando o Oceano",
       description: "Jogadores descobrindo as maravilhas aquáticas com golfinho",
       category: "Exploração",
     },
     {
-      src: "/mundocraft/images/acampamento-caverna.jpg",
+      src: `${IMAGE_PATH}acampamento-caverna.jpg`,
       title: "Acampamento na Caverna",
       description: "Base subterrânea aconchegante com decoração rústica",
       category: "Construção",
     },
     {
-      src: "/mundocraft/images/aventura-ar-livre.png",
+      src: `${IMAGE_PATH}aventura-ar-livre.png`,
       title: "Aventura ao Ar Livre",
       description: "Explorando o mundo com equipamentos diamante",
       category: "Aventura",
     },
     {
-      src: "/mundocraft/images/e222e0d9-6331-4c02-b236-cf1a94a970e8.png",
+      src: `${IMAGE_PATH}e222e0d9-6331-4c02-b236-cf1a94a970e8.png`,
       title: "Mineração Cooperativa",
       description: "Jogadores trabalhando juntos na mineração",
       category: "Cooperação",
     },
     {
-      src: "/mundocraft/images/estruturas-epicas.jpg",
+      src: `${IMAGE_PATH}estruturas-epicas.jpg`,
       title: "Estruturas Épicas",
       description: "Construções impressionantes da nossa comunidade",
       category: "Construção",

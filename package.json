@@ -8,7 +8,8 @@
     "build": "vite build",
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "vite build && git checkout gh-pages && cp -r dist/* . && git add . && git commit -m 'deploy' && git push && git checkout main"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",

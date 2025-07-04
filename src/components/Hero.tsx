@@ -1,3 +1,5 @@
+import { IMAGE_PATH } from "@/config";
+
 const Hero = () => {
   return (
     <section className="w-full h-screen overflow-hidden isolate bg-background text-foreground">
@@ -24,7 +26,7 @@ const Hero = () => {
         {/* Imagem do Hero */}
         <div className="w-full max-w-lg lg:max-w-xl">
           <img
-            src="/mundocraft/images/hero.png"
+            src={`${IMAGE_PATH}hero.png`}
             alt="Personagens Minecraft"
             className="w-full h-auto rounded-xl drop-shadow-xl"
           />

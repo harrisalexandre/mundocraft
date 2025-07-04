@@ -1,13 +1,15 @@
 import React from "react";
-import { createRoot } from "react-dom/client";
-import App from "./App.tsx";
+import ReactDOM from "react-dom/client";
+import App from "./App";
 import "./index.css";
-import { ThemeProvider } from "next-themes"; // adicionado
+import { BrowserRouter } from "react-router-dom";
 
-createRoot(document.getElementById("root")!).render(
+const basename = import.meta.env.MODE === "development" ? "/" : "/mundocraft";
+
+ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+    <BrowserRouter basename={basename}>
       <App />
-    </ThemeProvider>
+    </BrowserRouter>
   </React.StrictMode>
 );

@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" href="/mundocraft/images/ico.png" />
-    <link rel="apple-touch-icon" href="/mundocraft/images/ico.png" />
+    <link rel="icon" type="image/png" href="/lovable-uploads/ico.png" />
+    <link rel="apple-touch-icon" href="/lovable-uploads/ico.png" />
     <title>Servidor Minecraft Brasil - Vanilla 1.16.5 • 24/7 Online</title>
     <meta
       name="description"
@@ -39,11 +39,45 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Orbitron:wght@400;700;900&display=swap"
       rel="stylesheet"
     />
-    <script type="module" crossorigin src="/mundocraft/assets/index-DpJemOrN.js"></script>
-    <link rel="stylesheet" crossorigin href="/mundocraft/assets/index-0E2l0GR9.css">
+
+    <!-- Script para aplicar tema salvo -->
+    <script>
+      const theme = localStorage.getItem("theme");
+      if (theme === "dark") {
+        document.documentElement.classList.add("dark");
+      }
+    </script>
+    <script type="module" crossorigin src="/mundocraft/assets/index-DcRk79WX.js"></script>
+    <link rel="stylesheet" crossorigin href="/mundocraft/assets/index-BmE4Ak1H.css">
   </head>
 
-  <body>
+  <body class="bg-background text-foreground transition-colors">
     <div id="root"></div>
+
+    <!-- Exemplo de botão de alternância de tema -->
+    <button
+      onclick="toggleTheme()"
+      style="
+        position: fixed;
+        bottom: 1rem;
+        right: 1rem;
+        padding: 0.5rem 1rem;
+        border-radius: 8px;
+        background: #333;
+        color: white;
+        z-index: 9999;
+      "
+    >
+      🌙 Alternar Tema
+    </button>
+
+    <script>
+      function toggleTheme() {
+        const html = document.documentElement;
+        const isDark = html.classList.toggle("dark");
+        localStorage.setItem("theme", isDark ? "dark" : "light");
+      }
+    </script>
+
   </body>
 </html>
