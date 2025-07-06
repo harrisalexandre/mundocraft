@@ -4,7 +4,8 @@ import App from "./App";
 import "./index.css";
 import { BrowserRouter } from "react-router-dom";
 
-const basename = import.meta.env.MODE === "development" ? "/" : "/mundocraft";
+// Define o basename conforme ambiente
+const basename = import.meta.env.MODE === "development" ? "/" : "/mundocraft/";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
