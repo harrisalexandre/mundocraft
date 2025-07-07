@@ -22,6 +22,7 @@ const UserSchema = new mongoose.Schema({
 
 const User = mongoose.model("User", UserSchema);
 
+// Registrar
 router.post("/register", async (req, res) => {
   try {
     const { email, password } = req.body;
@@ -39,7 +40,6 @@ router.post("/register", async (req, res) => {
     });
 
     await newUser.save();
-
     res.status(201).json({ message: "Usuário cadastrado com sucesso!" });
   } catch (error) {
     console.error("Erro ao cadastrar:", error);
@@ -47,6 +47,7 @@ router.post("/register", async (req, res) => {
   }
 });
 
+// Login
 router.post("/login", async (req, res) => {
   try {
     const { email, password } = req.body;
@@ -61,21 +62,40 @@ router.post("/login", async (req, res) => {
       return res.status(400).json({ message: "Senha inválida!" });
     }
 
-    res.status(200).json({ message: "Login bem-sucedido!" });
+    const userData = {
+      id: user._id,
+      name: user.name,
+      email: user.email,
+      username: user.username,
+      avatar: user.avatar,
+      birthdate: user.birthdate,
+      discord: user.discord,
+      country: user.country,
+      bio: user.bio,
+      gameStyle: user.gameStyle,
+      notifications: user.notifications,
+      terms: user.terms,
+      tags: user.tags,
+    };
+
+    res.status(200).json({ message: "Login bem-sucedido!", user: userData });
   } catch (error) {
     console.error("Erro ao logar:", error);
     res.status(500).json({ message: "Erro ao logar usuário." });
   }
 });
 
-// ✅ Nova rota para listar todos os usuários
-router.get("/users", async (req, res) => {
+// Atualizar (update)
+router.put("/update/:id", async (req, res) => {
   try {
-    const users = await User.find();
-    res.json(users);
+    const updatedUser = await User.findByIdAndUpdate(req.params.id, req.body, {
+      new: true,
+    });
+
+    res.status(200).json(updatedUser);
   } catch (error) {
-    console.error("Erro ao buscar usuários:", error);
-    res.status(500).json({ message: "Erro ao buscar usuários." });
+    console.error("Erro ao atualizar:", error);
+    res.status(500).json({ message: "Erro ao atualizar usuário." });
   }
 });
 

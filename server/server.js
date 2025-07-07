@@ -8,7 +8,7 @@ dotenv.config();
 
 const app = express();
 app.use(cors());
-app.use(express.json({ limit: "5mb" })); // ou 10mb, se quiser
+app.use(express.json({ limit: "5mb" }));
 
 mongoose
   .connect(process.env.MONGO_URI, {
